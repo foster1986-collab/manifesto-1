@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Proposal 19 — The 18–21 Military Route | Manifesto 1.1</title>
+
+  <meta
+    name="description"
+    content="Proposal 19 of Manifesto 1.1: a voluntary three-year Armed Forces route for young people aged 18–21, offering salary, training, recognised qualifications and transferable civilian skills."
+  >
+
+  <style>
+    :root {
+      --navy: #071b2f;
+      --blue: #245b82;
+      --gold: #d5aa32;
+      --light: #f4f6f8;
+      --text: #172235;
+      --muted: #5d6773;
+      --border: #d8dde3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.65;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 22px 20px;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 20px 70px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      line-height: 1.05;
+      margin: 0 0 18px;
+    }
+
+    .strapline {
+      color: var(--blue);
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 1.75rem;
+      line-height: 1.2;
+      margin-top: 45px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      color: var(--navy);
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+
+    .core-box {
+      background: var(--light);
+      border: 2px solid var(--gold);
+      padding: 24px;
+      margin: 30px 0;
+    }
+
+    .core-box h2 {
+      margin-top: 0;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .core-box p {
+      margin-bottom: 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .package {
+      background: var(--light);
+      padding: 25px 30px;
+      border-left: 5px solid var(--gold);
+      margin: 25px 0;
+    }
+
+    .stage-grid {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      border: 1px solid var(--border);
+      margin: 25px 0;
+    }
+
+    .stage-grid div {
+      padding: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stage-grid div:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+
+    .stage {
+      background: var(--light);
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .scrutiny {
+      background: var(--navy);
+      color: white;
+      padding: 30px;
+      margin-top: 45px;
+    }
+
+    .scrutiny h2 {
+      color: white;
+      margin-top: 0;
+    }
+
+    .scrutiny li {
+      margin-bottom: 13px;
+    }
+
+    .commitment {
+      border-top: 4px solid var(--gold);
+      border-bottom: 4px solid var(--gold);
+      margin: 45px 0;
+      padding: 28px 0;
+    }
+
+    .commitment h2 {
+      margin-top: 0;
+    }
+
+    .commitment p {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .source-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 40px;
+    }
+
+    .cta {
+      margin-top: 45px;
+      text-align: center;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      font-size: 1.1rem;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 35px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding-top: 35px;
+      }
+
+      .stage-grid {
+        grid-template-columns: 80px 1fr;
+      }
+
+      .stage-grid div {
+        padding: 12px;
+      }
+
+      .scrutiny {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      Manifesto <span>1.1</span>
+    </a>
+
+    <div>A New Settlement for Britain</div>
+  </div>
+</header>
+
+<main>
+
+  <div class="eyebrow">
+    Day 20 · Proposal 19 · Section VIII · Policy 22
+  </div>
+
+  <h1>The 18–21 Military Route</h1>
+
+  <div class="strapline">
+    A voluntary three-year Armed Forces route offering salary,
+    training, recognised qualifications and transferable civilian skills.
+  </div>
+
+  <section class="core-box">
+    <h2>The Core Idea</h2>
+
+    <p>
+      At 18, young people would have the option to join the Armed Forces
+      for a three-year programme. At 21, they would have the opportunity
+      to leave with recognised qualifications and employment support.
+    </p>
+  </section>
+
+  <section>
+    <h2>What the route provides</h2>
+
+    <p>
+      The working master sets out a clear package for young people
+      choosing this route:
+    </p>
+
+    <div class="package">
+      <ul>
+        <li>A salary</li>
+        <li>Pension contributions</li>
+        <li>Accommodation and support</li>
+        <li>Military training</li>
+        <li>Technical qualifications</li>
+        <li>Transferable civilian skills</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why it sits inside the 21-Year Guarantee</h2>
+
+    <p>
+      Policy 22 is one route within the wider under-21 settlement.
+      The preceding policy says every young person will be expected
+      to remain in education, training, employment, an apprenticeship
+      or military service until their 21st birthday.
+    </p>
+
+    <p>
+      The military route therefore offers an additional pathway rather
+      than replacing civilian education, training, apprenticeships or
+      employment.
+    </p>
+
+    <p>
+      The wider 21-Year Guarantee still contains an unresolved wording
+      question: the original Manifesto 1.0 used “required”, while
+      Manifesto 1.1 uses “expected”. This proposal does not invent an
+      enforcement mechanism or resolve that separate question.
+    </p>
+  </section>
+
+  <section>
+    <h2>From service to civilian opportunity</h2>
+
+    <p>
+      The route is designed around both service and what comes afterwards.
+    </p>
+
+    <h3>A three-year programme</h3>
+
+    <p>
+      The programme would begin at age 18. During that period,
+      participants would receive the pay and support associated with
+      the route while gaining military training, technical qualifications
+      and skills intended to transfer into civilian employment.
+    </p>
+
+    <h3>At 21</h3>
+
+    <p>
+      At the end of the programme, participants would have the
+      opportunity to leave the Armed Forces with recognised qualifications
+      and employment support.
+    </p>
+
+    <p>
+      The working master does not require a participant to remain in
+      military service beyond the three-year route.
+    </p>
+
+    <div class="stage-grid">
+
+      <div class="stage">18</div>
+      <div>
+        Option to enter the Armed Forces route.
+      </div>
+
+      <div class="stage">18–21</div>
+      <div>
+        Three-year programme with salary, pension contributions,
+        accommodation/support, military training, technical qualifications
+        and transferable civilian skills.
+      </div>
+
+      <div class="stage">21</div>
+      <div>
+        Opportunity to leave with recognised qualifications and
+        employment support.
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>What this proposal does not yet specify</h2>
+
+    <p>
+      The proposal sets out the route’s duration and core package,
+      but it does not yet provide a complete implementation architecture.
+    </p>
+
+    <p>
+      It does not specify recruitment numbers, service allocation,
+      detailed qualification frameworks, medical or fitness standards,
+      training capacity, annual cost, safeguards for unsuitable applicants,
+      or the precise form of civilian employment support.
+    </p>
+
+    <p>
+      Those details should be developed through evidence, operational
+      testing and public scrutiny rather than invented at this stage.
+    </p>
+  </section>
+
+  <section class="scrutiny">
+
+    <h2>Questions for scrutiny</h2>
+
+    <p>
+      A serious military route for young people has to work for the
+      individual, the Armed Forces and the country.
+    </p>
+
+    <ul>
+      <li>
+        How many places could the Armed Forces realistically provide
+        each year without weakening training quality or operational readiness?
+      </li>
+
+      <li>
+        Which technical and vocational qualifications should be available,
+        and how should they be recognised by civilian employers?
+      </li>
+
+      <li>
+        What recruitment, medical, fitness and suitability standards
+        should apply?
+      </li>
+
+      <li>
+        How should accommodation, welfare, safeguarding and pastoral
+        support work for 18–21-year-olds?
+      </li>
+
+      <li>
+        What should happen when a participant discovers that military
+        service is unsuitable before completing the three years?
+      </li>
+
+      <li>
+        How should the route interact with apprenticeships, further
+        education and other pathways under the 21-Year Guarantee?
+      </li>
+
+      <li>
+        What employment support should be guaranteed at 21, and how
+        should transferable skills be evidenced to employers?
+      </li>
+
+      <li>
+        What would the programme cost at different participation levels,
+        and what existing Armed Forces capacity would be required?
+      </li>
+    </ul>
+
+  </section>
+
+  <section class="commitment">
+
+    <h2>Core commitment</h2>
+
+    <p>
+      Offer young people, from age 18, a voluntary three-year Armed Forces
+      route providing salary, pension contributions, accommodation/support,
+      military training, technical qualifications and transferable civilian
+      skills, with the opportunity at 21 to leave with recognised
+      qualifications and employment support.
+    </p>
+
+    <p>
+      The principle is straightforward: if military service is offered as
+      one pathway into adulthood, it should provide not only service to
+      the country, but a credible foundation for the participant’s future.
+    </p>
+
+  </section>
+
+  <div class="cta">
+    READ. QUESTION. CHALLENGE. IMPROVE.
+  </div>
+
+  <p class="source-note">
+    Source basis: Manifesto 1.1 Public Scrutiny Working Master,
+    Part VIII — The 21-Year Guarantee, Policy 22: The 18–21 Military Route.
+    This release expands the source into a public-scrutiny proposal without
+    treating unspecified implementation details as settled policy.
+  </p>
+
+  <a class="back" href="policies.html">
+    ← Back to all policies
+  </a>
+
+</main>
+
+<footer>
+  <strong>MANIFESTO 1.1 — A NEW SETTLEMENT FOR BRITAIN</strong>
+  <br><br>
+  <a href="https://manifesto1.co.uk">manifesto1.co.uk</a>
+  &nbsp; | &nbsp;
+  <a href="mailto:submissions@manifesto1.co.uk">
+    submissions@manifesto1.co.uk
+  </a>
+</footer>
+
+</body>
+</html>
