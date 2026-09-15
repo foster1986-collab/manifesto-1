@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Proposal 22: A Four-Day Working Economy | Manifesto 1.1</title>
+
+  <meta
+    name="description"
+    content="Proposal 22 of Manifesto 1.1: moving towards an approximately 32-hour, four-day standard working pattern alongside a seven-day economy."
+  >
+
+  <style>
+    :root {
+      --navy: #071a33;
+      --navy-light: #102b4d;
+      --gold: #d6aa4b;
+      --cream: #f5f1e8;
+      --white: #ffffff;
+      --red: #c83d3d;
+      --text: #182132;
+      --muted: #657084;
+      --border: #ddd8ce;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .header-inner {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .tagline {
+      margin: 4px 0 18px;
+      color: #e8dcc2;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    main {
+      width: min(900px, calc(100% - 32px));
+      margin: 40px auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(32px, 7vw, 70px);
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(7, 26, 51, 0.16);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 34px;
+      left: 0;
+      width: 8px;
+      height: 48px;
+      background: var(--red);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.3rem, 8vw, 5.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero-summary {
+      max-width: 690px;
+      margin: 28px 0 0;
+      color: #f0e5ca;
+      font-size: clamp(1.15rem, 3vw, 1.5rem);
+      line-height: 1.45;
+    }
+
+    .policy-label {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 16px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+    }
+
+    .content-card {
+      margin-top: 28px;
+      padding: clamp(26px, 5vw, 48px);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 28px 0 8px;
+      color: var(--navy-light);
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    .headline-stat {
+      margin: 30px 0;
+      padding: 28px 20px;
+      background: var(--navy);
+      color: var(--white);
+      border-left: 7px solid var(--gold);
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .headline-stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: clamp(2rem, 7vw, 3.7rem);
+      line-height: 1.1;
+    }
+
+    .headline-stat span {
+      display: block;
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .principle {
+      margin: 30px 0;
+      padding: 22px;
+      background: #f4ead4;
+      color: var(--navy);
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .grid-item {
+      padding: 22px;
+      background: #f7f5f0;
+      border-top: 4px solid var(--gold);
+      border-radius: 8px;
+    }
+
+    .grid-item h3 {
+      margin-top: 0;
+    }
+
+    .grid-item p {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .commitment {
+      margin-top: 30px;
+      padding: 30px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .commitment h2 {
+      color: var(--gold);
+    }
+
+    .commitment p {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .cta {
+      margin-top: 28px;
+      padding: 32px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      margin-bottom: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 22px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: var(--navy-light);
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      margin-top: 50px;
+      padding: 34px 16px;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .site-footer a {
+      color: var(--gold);
+    }
+
+    .site-footer p {
+      margin: 6px 0;
+    }
+
+    @media (max-width: 650px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 12px;
+        font-size: 0.92rem;
+      }
+
+      main {
+        margin-top: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="brand">MANIFESTO <span>1.1</span></p>
+      <p class="tagline">A New Settlement for Britain</p>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="policies.html">Policies</a>
+        <a href="about.html">About</a>
+        <a href="transparency.html">Transparency</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">
+        Day 23 · Proposal 22 · Section X · Policy 25
+      </p>
+
+      <h1>A Four-Day Working Economy</h1>
+
+      <p class="hero-summary">
+        A flexible full-time model designed to work alongside a
+        seven-day economy.
+      </p>
+
+      <span class="policy-label">32 HOURS · FOUR DAYS</span>
+    </section>
+
+    <section class="content-card">
+      <h2>The core idea</h2>
+
+      <p>
+        Britain has a productivity problem. Weak productivity and
+        economic output constrain wages, investment, public finances
+        and the country’s capacity to grow.
+      </p>
+
+      <p>
+        Proposal 22 would promote a four-day working week as part of a
+        wider shift towards a flexible, seven-day economy. The purpose
+        is not to close Britain for three days. It is to organise
+        working time more effectively while services and businesses
+        can operate across the whole week.
+      </p>
+
+      <p>
+        The intended standard full-time pattern would increasingly move
+        towards approximately 32 hours across four days, where
+        economically and operationally appropriate.
+      </p>
+
+      <div class="headline-stat">
+        <strong>32 HOURS</strong>
+        <span>across four working days, where appropriate</span>
+      </div>
+
+      <div class="principle">
+        Four days for the worker does not mean four days for Britain.
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>One policy, two connected levels</h2>
+
+      <div class="grid">
+        <article class="grid-item">
+          <h3>The individual working pattern</h3>
+          <p>
+            A standard full-time week increasingly organised around
+            approximately four days and 32 hours, where appropriate.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>The national operating week</h3>
+          <p>
+            Public services and businesses encouraged to operate across
+            seven days through staggered and flexible staffing.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>The intended outcome</h3>
+          <p>
+            Better organisation of working time, stronger productivity
+            and increased economic output.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>The wider mission</h3>
+          <p>
+            More jobs, wider participation and a modern economy capable
+            of operating throughout the week.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>Designed alongside Policy 26</h2>
+
+      <p>
+        Policy 25 must be read in context with Policy 26,
+        <strong>Britain: Open Seven Days a Week</strong>. The two
+        proposals are intended to operate together.
+      </p>
+
+      <p>
+        A shorter standard full-time pattern would sit within a longer
+        national operating week. Different teams and workers could
+        cover different days, allowing organisations to remain
+        available seven days a week without requiring every individual
+        to work seven days.
+      </p>
+
+      <div class="grid">
+        <article class="grid-item">
+          <h3>Policy 25</h3>
+          <p>
+            Moves the standard full-time pattern towards approximately
+            32 hours across four days where appropriate.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Policy 26</h3>
+          <p>
+            Moves public services and the wider economy towards
+            increasing seven-day operation.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Staggered coverage</h3>
+          <p>
+            Different working patterns can provide continuity across
+            the week while preserving individual rest time.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Flexible participation</h3>
+          <p>
+            A wider range of schedules may help more people find
+            working patterns suited to their circumstances.
+          </p>
+        </article>
+      </div>
+
+      <div class="principle">
+        A four-day working week and a seven-day economy are not
+        opposites. They are two parts of the same flexible model.
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>What the model is intended to unlock</h2>
+
+      <div class="grid">
+        <article class="grid-item">
+          <h3>Higher productivity</h3>
+          <p>
+            Encourage organisations to focus on output, organisation
+            and the effective use of working time.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Greater economic output</h3>
+          <p>
+            Use a seven-day operating model to expand activity across
+            more of the week.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>More employment</h3>
+          <p>
+            Longer operating coverage may require additional teams,
+            roles and shift combinations.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Additional work</h3>
+          <p>
+            People who want further or extra employment could have more
+            opportunities to take it up.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Better access</h3>
+          <p>
+            Extended operating days could make public and private
+            services easier to reach.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>A 24/7 economy</h3>
+          <p>
+            Align work, services, business activity and later
+            weekend-banking reform within a modern operating model.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>Productivity, flexibility and safeguards</h2>
+
+      <p>
+        The objective is not simply to compress the same pressures into
+        fewer days. The policy aims to encourage better organisation,
+        investment, technology, management and working practices so
+        stronger output can be achieved within a more focused standard
+        pattern.
+      </p>
+
+      <p>
+        The four-day model is one part of a wider productivity
+        strategy. Reducing scheduled hours alone does not guarantee
+        stronger economic growth.
+      </p>
+
+      <div class="grid">
+        <article class="grid-item">
+          <h3>Sector differences</h3>
+          <p>
+            The model may work differently across offices,
+            manufacturing, retail, hospitality, healthcare, transport
+            and emergency services.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Operational need</h3>
+          <p>
+            Implementation must recognise services requiring continuous
+            coverage or unable to reduce hours immediately.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Small employers</h3>
+          <p>
+            Transition arrangements must consider staffing costs,
+            recruitment pressures and administrative capacity.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Worker protection</h3>
+          <p>
+            Flexible scheduling must not become unpredictable hours,
+            involuntary overtime or weakened rest protections.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Pay and contracts</h3>
+          <p>
+            Salaries, hourly pay, overtime and contractual hours require
+            clear policy design.
+          </p>
+        </article>
+
+        <article class="grid-item">
+          <h3>Evidence and review</h3>
+          <p>
+            Phasing should be measured against productivity, wellbeing,
+            vacancies, service access and sector-specific results.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>The rota question</h2>
+
+      <p>
+        The master manifesto includes illustrative Monday-Friday,
+        Tuesday-Saturday and Wednesday-Sunday working spans. Each
+        example covers five days, so its relationship to a literal
+        four-day, 32-hour model requires clarification before any rota
+        is specified.
+      </p>
+
+      <p>
+        The settled principle is staggered and flexible coverage across
+        a seven-day economy. Exact rota patterns remain an
+        implementation question for scrutiny rather than a fixed
+        commitment in this release.
+      </p>
+
+      <div class="principle">
+        The test is whether Britain becomes more productive, flexible
+        and economically active.
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>Questions for scrutiny</h2>
+
+      <ul>
+        <li>
+          How should the move towards approximately 32 hours across four
+          days be phased?
+        </li>
+        <li>
+          Should pay be maintained, adjusted or determined through
+          sector and workplace agreements?
+        </li>
+        <li>
+          Which sectors are suitable for early adoption?
+        </li>
+        <li>
+          How should smaller employers be supported with transition
+          costs?
+        </li>
+        <li>
+          What evidence should determine whether productivity and total
+          economic output have increased?
+        </li>
+        <li>
+          How can flexible scheduling protect predictable hours, rest,
+          family life and worker choice?
+        </li>
+        <li>
+          How should the model interact with overtime, second jobs,
+          benefits, pensions and employment rights?
+        </li>
+        <li>
+          How should Policies 25 and 26 be piloted and evaluated
+          together?
+        </li>
+      </ul>
+    </section>
+
+    <section class="commitment">
+      <h2>Core commitment</h2>
+
+      <p>
+        Government will promote a move towards an approximately
+        32-hour, four-day standard full-time pattern where economically
+        and operationally appropriate. The model will be developed
+        alongside Policy 26’s seven-day economy so shorter individual
+        working patterns can coexist with wider national operating
+        hours.
+      </p>
+    </section>
+
+    <section class="cta">
+      <h2>Read. Question. Challenge. Improve.</h2>
+
+      <p>
+        Manifesto 1.1 is a public and evolving project. Read the
+        proposal, test its assumptions and contribute to its
+        development.
+      </p>
+
+      <a class="button" href="policies.html">Return to all policies</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Manifesto 1.1 — A New Settlement for Britain</strong></p>
+    <p>Created by Jamie Foster</p>
+    <p>
+      <a href="https://manifesto1.co.uk">manifesto1.co.uk</a>
+    </p>
+  </footer>
+</body>
+</html>
