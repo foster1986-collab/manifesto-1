@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Weekend Banking | Day 25 · Proposal 24 | Manifesto 1.1</title>
+
+  <meta
+    name="description"
+    content="Proposal 24 asks whether salaries, benefits, business payments and government payments could be credited on Saturdays and Sundays."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root {
+      --navy: #0b2242;
+      --navy-light: #18375f;
+      --gold: #e4b75c;
+      --cream: #f7f4ed;
+      --white: #ffffff;
+      --ink: #172033;
+      --muted: #5e6b7d;
+      --line: #d8dde5;
+      --pale-blue: #edf2f7;
+      --red: #c92d32;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 4px solid var(--gold);
+    }
+
+    .header-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 22px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 18px;
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .brand::before {
+      width: 7px;
+      height: 38px;
+      background: var(--red);
+      border-radius: 4px;
+      content: "";
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+    }
+
+    .site-nav a {
+      color: var(--white);
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    main {
+      width: min(960px, calc(100% - 32px));
+      margin: 34px auto 64px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 22px;
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .back-link:focus {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 6vw, 64px);
+      background:
+        linear-gradient(135deg, var(--navy), var(--navy-light));
+      color: var(--white);
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(11, 34, 66, 0.18);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -70px;
+      bottom: -95px;
+      width: 260px;
+      height: 260px;
+      border: 34px solid rgba(228, 183, 92, 0.14);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0;
+      font-size: clamp(2.5rem, 8vw, 5.25rem);
+      line-height: 0.96;
+      letter-spacing: -0.045em;
+    }
+
+    .hero-subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 690px;
+      margin: 24px 0 0;
+      color: #eef3f8;
+      font-size: clamp(1.08rem, 2.4vw, 1.4rem);
+    }
+
+    .tag-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .tag {
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .content-section {
+      margin-top: 30px;
+      padding: clamp(24px, 5vw, 44px);
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .content-section h2 {
+      margin: 0 0 16px;
+      color: var(--navy);
+      font-size: clamp(1.65rem, 4vw, 2.25rem);
+      line-height: 1.15;
+    }
+
+    .content-section h3 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .content-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .lead {
+      font-size: 1.12rem;
+    }
+
+    .question-panel,
+    .commitment {
+      margin-top: 30px;
+      padding: clamp(26px, 5vw, 44px);
+      background: var(--navy);
+      color: var(--white);
+      border-left: 8px solid var(--gold);
+      border-radius: 16px;
+    }
+
+    .question-panel small,
+    .commitment small {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .question-panel p,
+    .commitment p {
+      margin: 0;
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-weight: 900;
+      line-height: 1.25;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .card {
+      padding: 22px;
+      background: var(--pale-blue);
+      border: 1px solid #ced8e3;
+      border-radius: 13px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 22px;
+      background: #fff8e8;
+      border: 1px solid var(--gold);
+      border-radius: 13px;
+    }
+
+    .notice strong {
+      color: var(--navy);
+    }
+
+    .bullet-list {
+      padding-left: 22px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 12px;
+    }
+
+    .questions li {
+      margin-bottom: 14px;
+    }
+
+    .source-list {
+      padding-left: 20px;
+    }
+
+    .source-list li {
+      margin-bottom: 10px;
+    }
+
+    .source-list a {
+      color: var(--navy);
+      font-weight: 750;
+    }
+
+    .article-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 18px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 9px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .site-footer {
+      padding: 28px 16px;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .site-footer p {
+      margin: 4px 0;
+    }
+
+    .site-footer strong {
+      color: var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      .header-inner,
+      main {
+        width: min(100% - 24px, 960px);
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero,
+      .content-section {
+        border-radius: 14px;
+      }
+
+      .site-nav {
+        gap: 8px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">MANIFESTO 1.1</a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="policies.html">Policies</a>
+        <a href="evolution.html">Evolution</a>
+        <a href="challenge.html">Challenge</a>
+        <a href="founder.html">Founder</a>
+        <a href="media.html">Media</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a class="back-link" href="policies.html#policy-27">
+      ← Back to Policy 27
+    </a>
+
+    <article>
+      <header class="hero">
+        <p class="eyebrow">
+          Day 25 · Proposal 24 · Section X · Policy 27
+        </p>
+
+        <h1>Weekend Banking</h1>
+
+        <p class="hero-subtitle">
+          Can Britain make Saturday and Sunday ordinary payment days?
+        </p>
+
+        <div class="tag-row" aria-label="Proposal themes">
+          <span class="tag">Banking</span>
+          <span class="tag">Payments</span>
+          <span class="tag">Productivity</span>
+          <span class="tag">Public scrutiny</span>
+        </div>
+      </header>
+
+      <section class="content-section">
+        <h2>The core idea</h2>
+
+        <p class="lead">
+          It has never made intuitive sense that a payment created digitally
+          can still wait for Monday simply because it was scheduled for a
+          weekend.
+        </p>
+
+        <p>
+          For households, workers, businesses and government, that delay can
+          affect cash flow, certainty and access to money already due.
+        </p>
+
+        <p>
+          Proposal 24 asks whether the United Kingdom’s bulk and scheduled
+          payment systems could be modernised so that Bacs Direct Credits,
+          salaries, business payments and government payments can be credited
+          on Saturdays and Sundays.
+        </p>
+
+        <div class="notice">
+          <strong>A citizen-led proposal:</strong>
+          this project does not claim that every technical or institutional
+          answer is already known. Publication is intended to test whether the
+          objective is feasible, what would need to change, what it would cost
+          and which risks must be protected against.
+        </div>
+      </section>
+
+      <aside class="question-panel">
+        <small>The weekend payment question</small>
+        <p>Why should a digital payment wait for Monday?</p>
+      </aside>
+
+      <section class="content-section">
+        <h2>What happens now?</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Bacs Direct Credit</h3>
+            <p>
+              The established bulk-payment rail used extensively for wages,
+              benefits and business payments operates through a three-day
+              processing cycle and a working-day calendar.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Faster Payments</h3>
+            <p>
+              A different UK payment rail already operates day and night,
+              365 days a year. Eligible transfers are normally available
+              almost immediately, subject to participant limits and checks.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Salary and government files</h3>
+            <p>
+              Large scheduled payment files are commonly submitted through
+              Bacs because it is established, predictable and designed for
+              high-volume processing.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>The settlement layer</h3>
+            <p>
+              Customer-facing payments depend on underlying interbank
+              settlement, liquidity, reconciliation, operational support
+              and scheme rules.
+            </p>
+          </div>
+        </div>
+
+        <div class="notice">
+          Some UK payments already operate continuously. The question is
+          whether bulk and scheduled payments can safely become genuinely
+          seven-day too.
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Why does the working-day timetable exist?</h2>
+
+        <p>
+          The weekend pause is not simply caused by bank branches being
+          closed. Bacs was built as a coordinated batch-clearing system.
+          Moving it to seven-day processing could affect every participating
+          bank, employer, government body, payroll provider and software
+          platform connected to the scheme.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Batch efficiency</h3>
+            <p>
+              Files containing many payments are submitted, validated and
+              processed together, supporting reliable and relatively
+              low-cost high-volume payments.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Settlement and liquidity</h3>
+            <p>
+              Banks must hold and move sufficient funds between institutions.
+              Wider hours change when liquidity and settlement support are
+              required.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Reconciliation and returns</h3>
+            <p>
+              Participants need consistent processes for corrections,
+              rejected instructions, account changes, reports and payment
+              investigations.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Operational support</h3>
+            <p>
+              Seven-day processing may require weekend staffing, incident
+              management, customer support and coordinated service standards.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Maintenance and resilience</h3>
+            <p>
+              Continuous availability must still allow safe upgrades,
+              testing, recovery and contingency arrangements.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Rules and software</h3>
+            <p>
+              Payment calendars are embedded in contracts, payroll
+              timetables, treasury processes, accounting systems and
+              banking software.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>The policy direction</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Weekend crediting</h3>
+            <p>
+              Make it possible for eligible salaries, benefits, business
+              payments and government payments to credit on Saturdays and
+              Sundays.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Bacs modernisation</h3>
+            <p>
+              Examine whether the existing Bacs cycle could add weekend
+              processing without weakening reliability or affordability.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Alternative routing</h3>
+            <p>
+              Test whether suitable bulk payments could use, or be bridged
+              to, infrastructure that already supports continuous payment.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Published evidence</h3>
+            <p>
+              Require transparent assessment of costs, benefits, risks,
+              timelines and impacts before any national commitment is
+              finalised.
+            </p>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Proposed direction—not a settled mechanism:</strong>
+          set the objective of seven-day crediting, then allow technical
+          evidence to determine the safest and most proportionate route.
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Possible routes for scrutiny</h2>
+
+        <p>
+          The destination may be clear while the mechanism remains open.
+          These are options to investigate, not instructions presented as
+          technically settled.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Option A — Extend Bacs</h3>
+            <p>
+              Develop seven-day submission, processing and settlement days
+              within the existing Bacs scheme.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Option B — Use Faster Payments</h3>
+            <p>
+              Allow eligible scheduled or bulk credits to use real-time
+              infrastructure where capacity, cost, controls and recipient
+              reach permit.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Option C — Weekend value-dating</h3>
+            <p>
+              Explore whether receiving institutions could make verified
+              funds available on the intended weekend date before the legacy
+              cycle completes.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Option D — New bulk capability</h3>
+            <p>
+              Consider a modern bulk-payment service or overlay designed
+              around seven-day availability and richer payment information.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>What must not be compromised</h2>
+
+        <ul class="bullet-list">
+          <li>
+            <strong>Security and fraud prevention:</strong>
+            effective authentication, screening, intervention and
+            reimbursement protections must remain in place.
+          </li>
+
+          <li>
+            <strong>System resilience:</strong>
+            extended operation must include safe maintenance, incident
+            response, recovery and contingency arrangements.
+          </li>
+
+          <li>
+            <strong>Liquidity and settlement:</strong>
+            banks must be able to fund obligations and manage exposure
+            throughout any extended settlement window.
+          </li>
+
+          <li>
+            <strong>Affordability:</strong>
+            modernisation costs must be transparent and must not unfairly
+            exclude smaller employers, charities or public bodies.
+          </li>
+
+          <li>
+            <strong>Access and inclusion:</strong>
+            people who rely on cash, branches or assisted banking must not
+            be left behind.
+          </li>
+
+          <li>
+            <strong>Workforce fairness:</strong>
+            extended financial operations require predictable staffing,
+            adequate rest, fair reward and realistic specialist cover.
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Questions for scrutiny</h2>
+
+        <ol class="questions">
+          <li>
+            Which technical, legal or operational rules currently prevent
+            Bacs Direct Credits from settling or crediting at weekends?
+          </li>
+
+          <li>
+            Could Bacs itself process seven days a week, or would eligible
+            payments be better routed through Faster Payments or a new
+            bulk-payment service?
+          </li>
+
+          <li>
+            What capacity, liquidity and settlement changes would banks and
+            the Bank of England need to support?
+          </li>
+
+          <li>
+            Would seven-day processing materially improve household cash
+            flow, business productivity and public-service delivery?
+          </li>
+
+          <li>
+            What would implementation cost banks, employers, government,
+            payroll providers and smaller organisations?
+          </li>
+
+          <li>
+            How should fraud checks, mistaken payments, recalls, returns and
+            customer complaints operate during weekends?
+          </li>
+
+          <li>
+            Could implementation be phased by payment type or institution?
+          </li>
+
+          <li>
+            What measurable pilot would establish whether the benefits
+            justify the cost and complexity?
+          </li>
+        </ol>
+      </section>
+
+      <aside class="commitment">
+        <small>Core commitment</small>
+
+        <p>
+          Commission an independent feasibility review, publish the costs,
+          risks, options and timetable, and pilot the safest workable route
+          before national implementation.
+        </p>
+      </aside>
+
+      <section class="content-section">
+        <h2>The intended destination</h2>
+
+        <p class="lead">
+          Money due on a weekend should not be delayed solely because the
+          calendar says it is not a banking day.
+        </p>
+
+        <p>
+          Whether achieving that objective requires reforming Bacs, using
+          existing real-time rails differently or building new capability
+          must be determined through evidence and expert scrutiny.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Technical source material</h2>
+
+        <ul class="source-list">
+          <li>
+            <a href="https://www.bacs.co.uk/" target="_blank" rel="noopener">
+              Bacs — payment schemes and processing information
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.wearepay.uk/what-we-do/payment-systems/faster-payment-system/"
+              target="_blank"
+              rel="noopener"
+            >
+              Pay.UK — Faster Payment System
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.bankofengland.co.uk/payments/payment-settlement"
+              target="_blank"
+              rel="noopener"
+            >
+              Bank of England — payment and settlement
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.gov.uk/government/publications/national-payments-vision"
+              target="_blank"
+              rel="noopener"
+            >
+              HM Treasury — National Payments Vision
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          The feasibility, delivery mechanism, costs and timetable remain
+          explicitly open to scrutiny and are not represented as settled.
+        </p>
+      </section>
+
+      <nav class="article-actions" aria-label="Proposal navigation">
+        <a class="button" href="policies.html#policy-27">
+          Return to Policy 27
+        </a>
+
+        <a class="button secondary" href="proposal-23.html">
+          Previous proposal
+        </a>
+
+        <a class="button secondary" href="challenge.html">
+          Challenge this proposal
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>MANIFESTO 1.1</strong> — A New Settlement for Britain</p>
+    <p>Read. Question. Challenge. Improve.</p>
+  </footer>
+</body>
+</html>
