@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Work and Independence Programme | Manifesto 1.1</title>
+
+  <meta
+    name="description"
+    content="Proposal 25: a support-first programme helping people with long-term health conditions move into suitable, sustainable work while protecting everyone who cannot safely work."
+  >
+
+  <style>
+    :root {
+      --navy: #071a36;
+      --navy-light: #10294d;
+      --cream: #f7f4ed;
+      --white: #ffffff;
+      --gold: #e4b85f;
+      --red: #d82e2f;
+      --blue: #2f91c5;
+      --green: #58a66a;
+      --text: #172033;
+      --muted: #5f6878;
+      --border: #d9d5cc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 4px solid var(--red);
+    }
+
+    .header-inner {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-mark {
+      width: 6px;
+      height: 42px;
+      background: var(--red);
+      border-radius: 4px;
+    }
+
+    .header-link {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .header-link:hover,
+    .header-link:focus {
+      color: var(--gold);
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(7, 26, 54, 0.98), rgba(16, 41, 77, 0.96));
+      color: var(--white);
+      padding: 76px 0 68px;
+    }
+
+    .hero-inner,
+    main {
+      width: min(940px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 820px;
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+    }
+
+    .hero-summary {
+      max-width: 760px;
+      margin: 28px 0 0;
+      color: #dce3ee;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      line-height: 1.55;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .tag {
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 999px;
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    main {
+      padding: 60px 0 80px;
+    }
+
+    .scrutiny-notice {
+      margin-bottom: 44px;
+      padding: 20px 22px;
+      border-left: 5px solid var(--red);
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(7, 26, 54, 0.08);
+    }
+
+    .scrutiny-notice strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    section {
+      margin-top: 56px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: var(--navy);
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      line-height: 1.15;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 20px;
+    }
+
+    .principle {
+      margin: 44px 0;
+      padding: 30px;
+      background: var(--navy);
+      color: var(--white);
+      border-top: 6px solid var(--gold);
+      text-align: center;
+    }
+
+    .principle span {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .principle strong {
+      font-size: clamp(1.35rem, 4vw, 2rem);
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 24px;
+      background: var(--white);
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 8px 24px rgba(7, 26, 54, 0.07);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.55;
+    }
+
+    .support-grid .card {
+      border-top-color: var(--blue);
+    }
+
+    .safeguard-grid .card {
+      border-top-color: var(--green);
+    }
+
+    .employer-grid .card {
+      border-top-color: var(--red);
+    }
+
+    .important-note {
+      margin-top: 26px;
+      padding: 22px;
+      border: 2px solid var(--gold);
+      background: #fffaf0;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .questions {
+      padding: 32px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .questions h2 {
+      color: var(--gold);
+    }
+
+    .questions > p {
+      color: #dce3ee;
+    }
+
+    .questions ul {
+      margin: 25px 0 0;
+      padding-left: 24px;
+    }
+
+    .questions li {
+      margin-bottom: 14px;
+    }
+
+    .commitment {
+      margin-top: 56px;
+      padding: 36px;
+      background: var(--gold);
+      color: var(--navy);
+      text-align: center;
+    }
+
+    .commitment span {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .commitment strong {
+      display: block;
+      font-size: clamp(1.35rem, 4vw, 2.05rem);
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .source-note {
+      margin-top: 38px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .page-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 42px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      border: 2px solid var(--navy);
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    .button:hover,
+    .button:focus {
+      border-color: var(--red);
+      background: var(--red);
+      color: var(--white);
+    }
+
+    footer {
+      background: var(--navy);
+      color: #cbd4e1;
+    }
+
+    .footer-inner {
+      width: min(940px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+
+    .footer-inner p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        font-size: 17px;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 54px 0 50px;
+      }
+
+      main {
+        padding-top: 42px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .questions,
+      .commitment {
+        padding: 25px 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>MANIFESTO 1.1</span>
+      </a>
+
+      <a class="header-link" href="policies.html">View all policies</a>
+    </div>
+  </header>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Day 26 · Proposal 25 · Part XI · Policy 28</p>
+
+      <h1>Work and Independence Programme</h1>
+
+      <p class="hero-summary">
+        Helping people move from long-term sickness into suitable,
+        sustainable work through personalised support, retraining,
+        workplace adaptations and meaningful financial incentives.
+      </p>
+
+      <div class="meta-row" aria-label="Proposal themes">
+        <span class="tag">Employment</span>
+        <span class="tag">Independence</span>
+        <span class="tag">Productivity</span>
+        <span class="tag">Welfare reform</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <aside class="scrutiny-notice">
+      <strong>Published for scrutiny</strong>
+      This is a citizen-led proposal for public examination and improvement.
+      Detailed eligibility rules, payment levels, costs and delivery
+      arrangements are not presented as settled.
+    </aside>
+
+    <section aria-labelledby="core-idea">
+      <h2 id="core-idea">The core idea</h2>
+
+      <p>
+        Long-term sickness can leave people disconnected from employment
+        even when, with the right treatment, adjustments, training and
+        flexibility, they may want and be able to return to some form of
+        suitable work.
+      </p>
+
+      <p>
+        Proposal 25 would create a substantially enhanced support offer for
+        people receiving long-term sickness or disability benefits. The
+        objective is to make a safe return to work financially worthwhile
+        and practically possible—not to punish illness, disability or
+        periods of genuine incapacity.
+      </p>
+
+      <p>
+        This sits within the wider economic settlement. More people able to
+        participate on realistic terms can strengthen household incomes,
+        employment, productivity and the public finances. Success must,
+        however, be measured by sustainable outcomes—not by forcing people
+        into unsuitable jobs or simply moving them off support.
+      </p>
+    </section>
+
+    <div class="principle">
+      <span>The guiding principle</span>
+      <strong>Support first. Suitable work must always pay.</strong>
+    </div>
+
+    <section aria-labelledby="who-helped">
+      <h2 id="who-helped">Who the programme is designed to help</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>People who want to return</h3>
+          <p>
+            Individuals who believe work may again be possible but need a
+            practical, supported route back.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>People with fluctuating conditions</h3>
+          <p>
+            Support shaped around changing capacity, variable hours and the
+            risk of relapse.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>People needing new skills</h3>
+          <p>
+            Free retraining where previous work is no longer suitable or
+            realistic.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>People facing practical barriers</h3>
+          <p>
+            Help with adaptations, transport, occupational support and the
+            additional costs of returning.
+          </p>
+        </article>
+      </div>
+
+      <div class="important-note">
+        This programme must never presume that every sick or disabled person
+        can work. People who cannot work must remain protected.
+      </div>
+    </section>
+
+    <section aria-labelledby="support-package">
+      <h2 id="support-package">The support package</h2>
+
+      <p>
+        Delivery should be personalised, coordinated and simple enough to
+        navigate during illness or recovery.
+      </p>
+
+      <div class="card-grid support-grid">
+        <article class="card">
+          <h3>Additional return-to-work payments</h3>
+          <p>
+            Time-limited extra support to make the first stage of employment
+            financially worthwhile.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Temporary tax-free work allowances</h3>
+          <p>
+            A protected allowance during transition so initial earnings
+            create a clear financial gain.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Return-to-work bonuses</h3>
+          <p>
+            A milestone payment when suitable employment is entered and
+            sustained.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Free retraining</h3>
+          <p>
+            Funded qualifications, digital skills and vocational training
+            linked to realistic vacancies.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Occupational support</h3>
+          <p>
+            Specialist advice, phased-return planning and condition-aware
+            employment support.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Workplace adaptations</h3>
+          <p>
+            Practical equipment, accessible technology and changes to duties
+            or the working environment.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Transport support</h3>
+          <p>
+            Help where disability, location or reduced mobility makes the
+            journey to work a barrier.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>A named support contact</h3>
+          <p>
+            One accountable adviser coordinating benefits, training, health,
+            employer and workplace support.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="making-work-pay">
+      <h2 id="making-work-pay">Making work genuinely pay</h2>
+
+      <p>
+        A slogan is not enough. The test should be a person’s real disposable
+        income and stability after tax, benefit changes and the unavoidable
+        costs of working.
+      </p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>A clear financial gain</h3>
+          <p>
+            Returning to suitable work should leave a person materially
+            better off after transport, childcare and disability-related
+            costs.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>A gradual transition</h3>
+          <p>
+            Support should taper predictably as earnings and working hours
+            become established, avoiding sudden cliff edges.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Protection if work breaks down</h3>
+          <p>
+            Test a rapid route back to previous support where a medically
+            supported return fails because of health.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Transparent calculations</h3>
+          <p>
+            Give every participant a written better-off assessment before
+            any move into employment.
+          </p>
+        </article>
+      </div>
+
+      <div class="important-note">
+        No one should be asked to risk their health or financial security for
+        a return to work that does not last.
+      </div>
+    </section>
+
+    <section aria-labelledby="safeguards">
+      <h2 id="safeguards">Safeguards and exemptions</h2>
+
+      <p>
+        The programme must distinguish between inability, uncertainty and
+        unwillingness. Illness and disability are not moral failures.
+        Support must begin with medical evidence, individual circumstances
+        and the risk that work could worsen someone’s health.
+      </p>
+
+      <div class="card-grid safeguard-grid">
+        <article class="card">
+          <h3>No automatic presumption</h3>
+          <p>
+            A diagnosis, benefit award or time away from work must not be
+            treated as proof that somebody is ready for employment.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Health-risk exemption</h3>
+          <p>
+            No participation requirement where work or work preparation
+            would create a substantial risk of deterioration or harm.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Severe or progressive conditions</h3>
+          <p>
+            Clear protection for terminal, progressive, severe and enduring
+            conditions where employment is not realistic.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Treatment and recovery</h3>
+          <p>
+            An exemption or pause during acute treatment, crisis,
+            rehabilitation or a clinically significant recovery period.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Fluctuating capacity</h3>
+          <p>
+            Plans must allow for bad days, relapses, reduced hours and
+            changes in function without immediate penalty.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Independent review</h3>
+          <p>
+            A clear right to challenge decisions, submit specialist evidence
+            and receive support from an advocate.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="employers">
+      <h2 id="employers">What employers must contribute</h2>
+
+      <p>
+        Public funding should not carry the entire burden while workplaces
+        remain inaccessible. Employers participating in the programme should
+        meet clear standards.
+      </p>
+
+      <div class="card-grid employer-grid">
+        <article class="card">
+          <h3>Suitable roles</h3>
+          <p>
+            Jobs matched to capability, realistic hours, skills and health
+            needs—not placements designed merely to meet a target.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Flexible and phased returns</h3>
+          <p>
+            Staged hours, predictable scheduling, remote or hybrid work where
+            appropriate, and time for treatment.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Workplace adjustments</h3>
+          <p>
+            Timely equipment, accessible systems and reasonable changes to
+            duties, environments and communication.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Fair pay and progression</h3>
+          <p>
+            No second-class wage, dead-end placement or exploitation of
+            people returning after illness.
+          </p>
+        </article>
+      </div>
+
+      <div class="important-note">
+        The objective is sustained independence and better health—not a
+        short-term reduction in the benefit caseload.
+      </div>
+    </section>
+
+    <section class="questions" aria-labelledby="scrutiny-questions">
+      <h2 id="scrutiny-questions">Questions for scrutiny</h2>
+
+      <p>
+        This proposal requires detailed testing with disabled people, people
+        with long-term health conditions, employers, clinicians,
+        occupational-health specialists, welfare advisers and
+        employment-support organisations.
+      </p>
+
+      <ul>
+        <li>
+          How should “work always pays” be measured after tax, benefit
+          withdrawal and the extra costs of disability and employment?
+        </li>
+        <li>
+          Which payments or allowances would create the strongest incentive
+          without producing unfair cliff edges?
+        </li>
+        <li>
+          How long should transitional protection last, and what happens if a
+          return to work fails because of health?
+        </li>
+        <li>
+          Which conditions and circumstances should create an automatic
+          exemption, and when should individual assessment be used?
+        </li>
+        <li>
+          How should fluctuating and episodic conditions be reflected in
+          hours, attendance and benefit protection?
+        </li>
+        <li>
+          Who should make capability and health-risk decisions, and how can
+          independence and consistency be protected?
+        </li>
+        <li>
+          What duties should employers accept in exchange for public support
+          with recruitment, training and adaptations?
+        </li>
+        <li>
+          How can small employers participate without facing unaffordable
+          costs or complex administration?
+        </li>
+        <li>
+          Which outcomes should be published: job entry, earnings, retention,
+          health, participant experience and employer experience?
+        </li>
+        <li>
+          How should the programme be piloted, evaluated and changed before
+          any wider rollout?
+        </li>
+      </ul>
+    </section>
+
+    <div class="commitment">
+      <span>Core commitment</span>
+      <strong>
+        Create a support-first Work and Independence Programme that makes
+        suitable work pay, removes practical barriers and protects everyone
+        who cannot safely work.
+      </strong>
+    </div>
+
+    <section aria-labelledby="final-position">
+      <h2 id="final-position">The proposed direction</h2>
+
+      <p>
+        People should not be written off when the right support could help
+        them rebuild independence. Equally, nobody should be pushed beyond
+        their health or punished for circumstances they cannot control.
+      </p>
+
+      <p>
+        The programme should proceed through co-design, transparent pilots
+        and published evidence, with success measured through sustainable
+        employment, improved incomes, retention, health and participant
+        experience.
+      </p>
+    </section>
+
+    <p class="source-note">
+      <strong>Source basis:</strong> Manifesto 1.1, Part XI, Policy 28 /
+      Major Promise 25—Work and Independence Programme, read alongside
+      Policy 29 on capability assessment and Policy 30 on hardship
+      protection. Eligibility rules, payment levels, exemptions, delivery
+      arrangements, costs and timetable remain open to scrutiny.
+    </p>
+
+    <nav class="page-actions" aria-label="Page navigation">
+      <a class="button" href="policies.html">Return to policy index</a>
+      <a class="button secondary" href="index.html">Manifesto homepage</a>
+    </nav>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>
+        Manifesto 1.1 · A New Settlement for Britain · Read. Question.
+        Challenge. Improve.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
