@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reformed Capability Assessments | Manifesto 1.1</title>
+
+  <meta
+    name="description"
+    content="Proposal 26: reform sickness and disability assessments to consider what people can safely, reliably and sustainably do, while preserving strong protections."
+  >
+
+  <style>
+    :root {
+      --navy: #071a38;
+      --navy-light: #10294d;
+      --cream: #f7f4ed;
+      --white: #ffffff;
+      --gold: #e1b45d;
+      --red: #cf2f32;
+      --blue: #1688bd;
+      --green: #45a462;
+      --text: #142033;
+      --muted: #5f6876;
+      --border: #d9d5cc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: var(--white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .header-inner {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-mark {
+      width: 6px;
+      height: 42px;
+      background: var(--red);
+      border-radius: 999px;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .site-nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+      color: var(--gold);
+    }
+
+    .hero {
+      background:
+        linear-gradient(
+          120deg,
+          rgba(7, 26, 56, 0.98),
+          rgba(16, 41, 77, 0.96)
+        );
+      color: var(--white);
+      padding: 80px 0 76px;
+    }
+
+    .hero-inner,
+    .content {
+      width: min(1000px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--gold);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(2.5rem, 7vw, 5.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 28px 0 0;
+      color: #dfe6ef;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      line-height: 1.45;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .tag {
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      color: #edf3fa;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    main {
+      padding: 68px 0 86px;
+    }
+
+    section {
+      margin-bottom: 68px;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      color: var(--navy);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.12rem;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.24rem;
+      line-height: 1.72;
+    }
+
+    .principle,
+    .commitment {
+      padding: 30px;
+      border-left: 7px solid var(--gold);
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 3px 16px 16px 3px;
+    }
+
+    .principle .label,
+    .commitment .label {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .principle p,
+    .commitment p {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      line-height: 1.5;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      box-shadow: 0 8px 24px rgba(7, 26, 56, 0.05);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .blue-card {
+      border-top: 5px solid var(--blue);
+    }
+
+    .green-card {
+      border-top: 5px solid var(--green);
+    }
+
+    .gold-card {
+      border-top: 5px solid var(--gold);
+    }
+
+    .important-note {
+      margin-top: 22px;
+      padding: 24px;
+      background: #eef5f8;
+      border-left: 5px solid var(--blue);
+      border-radius: 4px 12px 12px 4px;
+    }
+
+    .important-note strong {
+      color: var(--navy);
+    }
+
+    .practical-test {
+      padding: 28px;
+      background: #fff8e8;
+      border: 1px solid #ead299;
+      border-radius: 14px;
+    }
+
+    .practical-test h3 {
+      color: #775312;
+    }
+
+    .practical-test p {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .scrutiny-notice {
+      padding: 28px;
+      background: #fbeff0;
+      border: 1px solid #e8bfc1;
+      border-left: 6px solid var(--red);
+      border-radius: 4px 14px 14px 4px;
+    }
+
+    .scrutiny-notice h3 {
+      color: #892326;
+    }
+
+    .scrutiny-notice p:last-child {
+      margin-bottom: 0;
+    }
+
+    .questions {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: scrutiny;
+    }
+
+    .questions li {
+      position: relative;
+      margin-bottom: 14px;
+      padding: 18px 20px 18px 64px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      counter-increment: scrutiny;
+    }
+
+    .questions li::before {
+      content: counter(scrutiny);
+      position: absolute;
+      top: 17px;
+      left: 18px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .source-note {
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 20px;
+      background: var(--navy);
+      color: var(--white);
+      border: 2px solid var(--navy);
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: var(--navy-light);
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .site-footer {
+      padding: 38px 0;
+      background: var(--navy);
+      color: #cbd4e0;
+    }
+
+    .footer-inner {
+      width: min(1000px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        min-height: auto;
+        padding: 20px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-nav {
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-top: 52px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .hero-inner,
+      .content,
+      .header-inner,
+      .footer-inner {
+        width: min(100% - 28px, 1000px);
+      }
+
+      .site-nav {
+        font-size: 0.9rem;
+      }
+
+      .principle,
+      .commitment,
+      .card,
+      .scrutiny-notice,
+      .practical-test {
+        padding: 21px;
+      }
+
+      .questions li {
+        padding-right: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>MANIFESTO 1.1</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="policies.html">Policies</a>
+        <a href="scrutiny.html">Scrutiny</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Day 27 · Proposal 26 · Part XI · Policy 29</p>
+
+      <h1>Reformed Capability Assessments</h1>
+
+      <p class="subtitle">
+        Assessing what people can do — safely, reliably and sustainably.
+      </p>
+
+      <div class="tags" aria-label="Proposal themes">
+        <span class="tag">Work</span>
+        <span class="tag">Disability</span>
+        <span class="tag">Assessment reform</span>
+        <span class="tag">Safeguards</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="content">
+      <section>
+        <h2>The core idea</h2>
+
+        <p class="lead">
+          Too often, sickness and disability assessments are experienced as a
+          catalogue of limitations. A decision that someone has limited
+          capability can then become a long-term label, even where their health,
+          skills or circumstances might allow some suitable work with the right
+          support.
+        </p>
+
+        <p>
+          Proposal 26 would develop a capability-led framework. It would examine
+          functional capacity, adaptability, transferable skills, realistic
+          hours, reasonable workplace adjustments and the types of work a person
+          might safely and reliably undertake. A diagnosis alone would not
+          determine employment status.
+        </p>
+
+        <p>
+          The aim is to help more people move towards suitable work, reduce
+          avoidable long-term economic inactivity and support higher employment,
+          growth, productivity and tax revenue. Those outcomes are aims to be
+          tested, not guaranteed savings. Nobody should lose protection merely
+          because an assessment identifies a theoretical ability that does not
+          translate into a real, sustainable job.
+        </p>
+      </section>
+
+      <section>
+        <div class="principle">
+          <span class="label">Guiding principle</span>
+          <p>
+            Assess capability, support possibility, protect health.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Two assessments — two different purposes</h2>
+
+        <div class="card-grid">
+          <article class="card blue-card">
+            <h3>Work capability and LCWRA</h3>
+            <p>
+              This assessment concerns capability for work and work-related
+              activity. Reform should produce a practical capability profile,
+              while retaining clear protection where work or preparation would
+              create a substantial health risk.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>Personal Independence Payment</h3>
+            <p>
+              PIP helps with the extra impact of difficulties in daily living
+              and mobility. It can be paid while a person works. It should not
+              be converted into an employability test or removed solely because
+              someone can do a job.
+            </p>
+          </article>
+        </div>
+
+        <div class="important-note">
+          <strong>Important distinction:</strong>
+          Being able to work does not mean disability has disappeared, and
+          being unable to do one kind of work does not mean a person has nothing
+          to contribute.
+        </div>
+      </section>
+
+      <section>
+        <h2>A practical capability profile</h2>
+
+        <div class="card-grid">
+          <article class="card gold-card">
+            <h3>Functional capability</h3>
+            <p>
+              What activities can be carried out safely, to an acceptable
+              standard, repeatedly and within a reasonable time?
+            </p>
+          </article>
+
+          <article class="card gold-card">
+            <h3>Health risk</h3>
+            <p>
+              Could work or preparation worsen the condition, create a
+              substantial risk of harm or disrupt essential treatment?
+            </p>
+          </article>
+
+          <article class="card gold-card">
+            <h3>Adaptability</h3>
+            <p>
+              Could different methods, equipment, training or technology make a
+              task realistic?
+            </p>
+          </article>
+
+          <article class="card gold-card">
+            <h3>Reasonable adjustments</h3>
+            <p>
+              What changes to duties, hours, location, communication or the
+              working environment are required?
+            </p>
+          </article>
+
+          <article class="card gold-card">
+            <h3>Different forms of work</h3>
+            <p>
+              Which job families or tasks fit the person’s capacity, and which
+              are clearly unsuitable?
+            </p>
+          </article>
+
+          <article class="card gold-card">
+            <h3>Realistic hours</h3>
+            <p>
+              What pattern is sustainable, including phased, part-time,
+              flexible, remote or hybrid work?
+            </p>
+          </article>
+
+          <article class="card gold-card">
+            <h3>Transferable skills</h3>
+            <p>
+              Which experience, qualifications and personal strengths could
+              support a new role?
+            </p>
+          </article>
+
+          <article class="card gold-card">
+            <h3>Fluctuation and recovery</h3>
+            <p>
+              How do good days, bad days, relapses, fatigue, treatment and
+              recovery affect dependable participation?
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>What the decision should lead to</h2>
+
+        <div class="card-grid">
+          <article class="card blue-card">
+            <h3>Protected from requirements</h3>
+            <p>
+              Where work or preparation is not safe or realistic, support
+              continues without inappropriate conditionality.
+            </p>
+          </article>
+
+          <article class="card blue-card">
+            <h3>Preparation with protection</h3>
+            <p>
+              Where future work may be possible, offer voluntary or carefully
+              tailored treatment-compatible preparation and skills support.
+            </p>
+          </article>
+
+          <article class="card blue-card">
+            <h3>Suitable-work pathway</h3>
+            <p>
+              Where work is realistically possible, link the profile to named
+              support, training, adjustments and genuine vacancies.
+            </p>
+          </article>
+
+          <article class="card blue-card">
+            <h3>Review when circumstances change</h3>
+            <p>
+              Use proportionate review periods based on prognosis and evidence,
+              avoiding repeated assessment where improvement is not expected.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="practical-test">
+          <h3>The practical test</h3>
+          <p>
+            A capability on paper must connect to real work that is available,
+            suitable and sustainable.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Safeguards</h2>
+
+        <p>
+          A more positive assessment must not become a softer-sounding route to
+          removing support. Decisions should be evidence-led, independently
+          challengeable and connected to the protections in Policies 28 and 30.
+        </p>
+
+        <div class="card-grid">
+          <article class="card green-card">
+            <h3>No diagnosis-only decision</h3>
+            <p>
+              Consider the individual impact of all physical, sensory, mental,
+              intellectual and cognitive conditions.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>Reliability standard</h3>
+            <p>
+              An activity counts only where it can be done safely, repeatedly,
+              to an acceptable standard and in a reasonable time.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>Fluctuating conditions</h3>
+            <p>
+              Assess capacity across time, including bad days, episodic illness,
+              fatigue, pain and the after-effects of activity.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>Substantial-risk protection</h3>
+            <p>
+              Do not impose work or preparation where it could cause
+              deterioration, relapse, self-harm or other serious harm.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>Independent evidence</h3>
+            <p>
+              Accept relevant evidence from clinicians, occupational therapists,
+              support workers, carers and the claimant.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>Right to challenge</h3>
+            <p>
+              Provide clear reasons, access to the evidence used, advocacy and a
+              timely independent reconsideration or appeal.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>No imaginary jobs</h3>
+            <p>
+              Do not declare capability solely by naming a theoretical task that
+              is unavailable or incompatible with the person’s needs.
+            </p>
+          </article>
+
+          <article class="card green-card">
+            <h3>PIP remains separate</h3>
+            <p>
+              Daily-living and mobility support must not be withdrawn simply
+              because a person works or has some work capability.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>The unresolved reassessment question</h2>
+
+        <div class="scrutiny-notice">
+          <p>
+            Manifesto 1.0 proposed that every person receiving PIP and LCWRA
+            support would ultimately be reassessed under a new framework. That
+            universal-reassessment commitment was not included in the supplied
+            Manifesto 1.1 master and is not silently reinstated here.
+          </p>
+
+          <p>
+            The better approach should be decided through scrutiny: targeted
+            transition, natural reassessment points and evidence-based exemptions
+            may be fairer and less costly than a compulsory reassessment of every
+            existing claimant.
+          </p>
+
+          <p>
+            <strong>
+              No reform should create a mass reassessment exercise without
+              evidence that it is necessary, workable, humane and better than
+              the system it replaces.
+            </strong>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Questions for scrutiny</h2>
+
+        <p>
+          This proposal should be co-designed and tested with disabled people,
+          benefit claimants, clinicians, occupational-health specialists,
+          employers, welfare advisers, tribunals and employment-support
+          organisations.
+        </p>
+
+        <ol class="questions">
+          <li>
+            How can an assessment focus on strengths without minimising pain,
+            fatigue, distress, risk or the extra costs of disability?
+          </li>
+
+          <li>
+            Which measures best identify safe, reliable and sustainable work
+            capacity rather than one-off task performance?
+          </li>
+
+          <li>
+            How should assessors connect a capability profile to real
+            occupations, vacancies, hours and workplace adjustments?
+          </li>
+
+          <li>
+            Which conditions, prognoses or circumstances should lead to a long
+            award, light-touch review or no routine reassessment?
+          </li>
+
+          <li>
+            Should existing claimants move to the new framework only at natural
+            review points, through targeted transition or through universal
+            reassessment?
+          </li>
+
+          <li>
+            How should PIP accuracy be improved while preserving its purpose and
+            its availability to people in work?
+          </li>
+
+          <li>
+            Who should conduct assessments, what qualifications should they hold
+            and how should independence be protected?
+          </li>
+
+          <li>
+            What evidence should automatically trigger substantial-risk
+            protection or exemption from work-related requirements?
+          </li>
+
+          <li>
+            How should employers be required to respond when an assessment
+            identifies adjustments or restricted hours?
+          </li>
+
+          <li>
+            Which results should be published: decision accuracy, appeals,
+            health outcomes, employment, earnings, retention, claimant
+            experience and administrative cost?
+          </li>
+
+          <li>
+            What pilot design would show whether the reform genuinely improves
+            lives and the public finances before wider rollout?
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <div class="commitment">
+          <span class="label">Core commitment</span>
+          <p>
+            Replace a deficit-only system with a fair capability profile —
+            linked to real support, real jobs and strong health protections.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Proposed direction</h2>
+
+        <p class="lead">
+          People should not be written off when suitable work may be possible.
+          Equally, identifying a limited capability must never be confused with
+          proving that a person can sustain any job, at any hours, without
+          support.
+        </p>
+
+        <p>
+          Reform should proceed through co-design, pilots, independent
+          evaluation and published evidence before national implementation.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="scrutiny.html">Contribute to scrutiny</a>
+          <a class="button button-secondary" href="policies.html">
+            Return to all policies
+          </a>
+        </div>
+      </section>
+
+      <section class="source-note">
+        <p>
+          <strong>Source basis:</strong> Manifesto 1.1, Part XI, Policy 29 /
+          Major Promise 26 — Assess Capability, Not Merely Diagnosis.
+          Current-system distinction checked against GOV.UK: “Health conditions,
+          disability and Universal Credit”; “Personal Independence Payment
+          (PIP): Eligibility”; and DWP, “PIP assessment guide part 2: the
+          assessment criteria” (updated 31 August 2026). Read alongside Policy
+          28 on Work and Independence and Policy 30 on hardship protection.
+          This citizen-led proposal is published for scrutiny; assessment
+          criteria, transition arrangements, costs, savings and timetable are
+          not settled.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>
+        Manifesto 1.1 — a citizen-led project for public scrutiny, open debate
+        and real policy change.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
