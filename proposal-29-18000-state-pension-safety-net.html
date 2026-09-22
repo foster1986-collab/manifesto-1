@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Proposal 29: £18,000 State Pension Safety Net | Manifesto 1.1</title>
+
+  <meta
+    name="description"
+    content="Proposal 29 would establish a long-term minimum retirement-income floor of £18,000 a year, with state support assessed against private pension income."
+  >
+
+  <style>
+    :root {
+      --navy: #071b38;
+      --navy-light: #10294d;
+      --red: #d92d2d;
+      --gold: #e1b45b;
+      --cream: #f7f5f0;
+      --paper: #ffffff;
+      --text: #172033;
+      --muted: #5d6675;
+      --border: #d9d5cb;
+      --green: #3c9a65;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: white;
+      border-bottom: 4px solid var(--red);
+    }
+
+    .header-inner {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 24px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .brand::before {
+      content: "";
+      width: 6px;
+      height: 38px;
+      border-radius: 3px;
+      background: var(--red);
+    }
+
+    .tagline {
+      margin: 6px 0 0 20px;
+      color: #c7cfda;
+      font-size: 0.92rem;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .site-nav a {
+      color: white;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 42px auto 70px;
+    }
+
+    .breadcrumb {
+      margin-bottom: 26px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .breadcrumb a {
+      color: var(--navy);
+    }
+
+    .proposal-header {
+      padding: 38px;
+      background: var(--navy);
+      color: white;
+      border-radius: 18px;
+      border-top: 6px solid var(--red);
+      box-shadow: 0 14px 35px rgba(7, 27, 56, 0.14);
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--gold);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(2.1rem, 6vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .proposal-subtitle {
+      margin: 24px 0 0;
+      max-width: 720px;
+      color: #d7dde7;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.32rem;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .status {
+      padding: 8px 13px;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 999px;
+      color: #e2e7ef;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .notice {
+      margin-top: 24px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.08);
+      border-left: 4px solid var(--gold);
+      color: #e2e7ef;
+    }
+
+    section {
+      margin-top: 32px;
+      padding: 34px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-size: clamp(1.55rem, 4vw, 2.15rem);
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 26px 0 8px;
+      color: var(--navy);
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .commitment {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      border: 0;
+    }
+
+    .commitment h2 {
+      color: var(--gold);
+      font-size: 0.9rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .commitment p {
+      margin: 0;
+      font-size: clamp(1.45rem, 4.5vw, 2.3rem);
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .principle {
+      padding: 20px;
+      background: #f4f6f9;
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+    }
+
+    .principle h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .principle p {
+      margin: 0;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 22px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f4f6f9;
+    }
+
+    td:last-child {
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .formula {
+      margin: 24px 0 0;
+      padding: 18px;
+      background: #fff7df;
+      border: 1px solid #e7cb85;
+      border-radius: 8px;
+      color: var(--navy);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .linked-policy {
+      border-left: 6px solid var(--green);
+    }
+
+    .linked-policy a {
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    ul,
+    ol {
+      margin: 14px 0 0;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .questions li {
+      padding-left: 5px;
+    }
+
+    .cta {
+      text-align: center;
+    }
+
+    .cta p {
+      max-width: 660px;
+      margin: 0 auto 22px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 7px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button:hover,
+    .button:focus {
+      background: #efc774;
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 34px 20px;
+      background: var(--navy);
+      color: #cbd3df;
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 650px) {
+      .header-inner {
+        width: min(100% - 28px, 1100px);
+      }
+
+      main {
+        width: min(100% - 24px, 920px);
+        margin-top: 24px;
+      }
+
+      .proposal-header,
+      section {
+        padding: 25px 21px;
+      }
+
+      .principles {
+        grid-template-columns: 1fr;
+      }
+
+      .site-nav {
+        gap: 12px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">MANIFESTO 1.1</div>
+      <p class="tagline">A New Settlement for Britain</p>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="policies.html">Policies</a>
+        <a href="evolution.html">Evolution</a>
+        <a href="transparency.html">Scrutiny</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="breadcrumb">
+      <a href="index.html">Home</a> /
+      <a href="policies.html">Policies</a> /
+      Proposal 29
+    </p>
+
+    <article>
+      <header class="proposal-header">
+        <p class="eyebrow">Day 30 · Proposal 29 · Part XII · Policy 32</p>
+
+        <h1>£18,000 State Pension Safety Net</h1>
+
+        <p class="proposal-subtitle">
+          A long-term minimum retirement-income floor, with state support
+          assessed directly against private pension income.
+        </p>
+
+        <div class="status-row">
+          <span class="status">Pensions</span>
+          <span class="status">Retirement security</span>
+          <span class="status">Public scrutiny invited</span>
+        </div>
+
+        <p class="notice">
+          This is a citizen-led proposal for examination and development.
+          Detailed costings, actuarial modelling, transition planning and
+          legislation would be required before implementation.
+        </p>
+      </header>
+
+      <section>
+        <h2>The core idea</h2>
+
+        <p>
+          Manifesto 1.1 proposes a long-term minimum retirement income of
+          £18,000 a year.
+        </p>
+
+        <p>
+          Private pension income would be assessed first. Where that income
+          falls below £18,000, the state would contribute the amount required
+          to bring the person up to the proposed minimum floor.
+        </p>
+
+        <p>
+          Someone already receiving £18,000 or more from private pensions
+          would receive no state contribution under this model. Income above
+          the floor would not be reduced.
+        </p>
+
+        <p>
+          The objective is to prevent poverty in retirement while gradually
+          shifting a greater share of retirement provision towards funded
+          workplace pensions.
+        </p>
+      </section>
+
+      <section class="commitment">
+        <h2>The core commitment</h2>
+        <p>
+          Everyone has a minimum retirement-income floor of £18,000 a year.
+        </p>
+      </section>
+
+      <section>
+        <h2>How the safety net would work</h2>
+
+        <div class="principles">
+          <div class="principle">
+            <h3>Income floor</h3>
+            <p>
+              The long-term target is a minimum total retirement income of
+              £18,000 a year.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>Private income assessed</h3>
+            <p>
+              Private pension income would be assessed before the state
+              contribution is calculated.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>The state fills the gap</h3>
+            <p>
+              Where private pension income is below £18,000, the state would
+              supply the difference.
+            </p>
+          </div>
+
+          <div class="principle">
+            <h3>Income above the floor</h3>
+            <p>
+              Where private pension income is £18,000 or more, no state
+              top-up would be paid.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Worked examples</h2>
+
+        <p>
+          The examples below show the proposed state contribution at
+          different levels of assessed private pension income.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Private pension income</th>
+                <th scope="col">State contribution</th>
+                <th scope="col">Total retirement income</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>£5,000</td>
+                <td>£13,000</td>
+                <td>£18,000</td>
+              </tr>
+
+              <tr>
+                <td>£10,000</td>
+                <td>£8,000</td>
+                <td>£18,000</td>
+              </tr>
+
+              <tr>
+                <td>£16,000</td>
+                <td>£2,000</td>
+                <td>£18,000</td>
+              </tr>
+
+              <tr>
+                <td>£18,000</td>
+                <td>£0</td>
+                <td>£18,000</td>
+              </tr>
+
+              <tr>
+                <td>£25,000</td>
+                <td>£0</td>
+                <td>£25,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="formula">
+          Proposed state top-up = the greater of £0 or
+          (£18,000 − assessed private pension income).
+        </p>
+      </section>
+
+      <section class="linked-policy">
+        <h2>Two linked pension reforms</h2>
+
+        <p>
+          This proposal is designed to operate alongside
+          <a href="proposal-28-compulsory-workplace-pensions.html">
+            Proposal 28: Compulsory Workplace Pensions
+          </a>.
+        </p>
+
+        <p>
+          Proposal 28 would increase funded private pension provision
+          throughout working life. Proposal 29 would provide a minimum
+          retirement-income floor where that private provision remains
+          insufficient.
+        </p>
+
+        <p>
+          Together, the policies seek to build greater personal provision
+          through employment while ensuring that nobody falls below the
+          proposed minimum income in retirement.
+        </p>
+      </section>
+
+      <section>
+        <h2>A long-term reform</h2>
+
+        <p>
+          Policy 32 proposes replacing the triple lock over the longer term
+          with a defined retirement-income floor.
+        </p>
+
+        <p>
+          The transition timetable, uprating mechanism, treatment of
+          existing pensioners and protections for people approaching
+          retirement have not yet been settled.
+        </p>
+
+        <p>
+          These arrangements would require independent actuarial modelling,
+          distributional analysis, parliamentary scrutiny and public
+          consultation.
+        </p>
+      </section>
+
+      <section>
+        <h2>Safeguards and design risks</h2>
+
+        <h3>Protect the incentive to save</h3>
+        <p>
+          A pound-for-pound withdrawal of state support could weaken the
+          financial reward from modest private saving. Alternative tapers
+          should therefore be modelled and tested.
+        </p>
+
+        <h3>Deliver a fair transition</h3>
+        <p>
+          Protection would be required for existing pensioners and people
+          who had little opportunity to build a workplace pension under the
+          proposed new system.
+        </p>
+
+        <h3>Define assessable income</h3>
+        <p>
+          The policy must establish how annuities, pension drawdown, lump
+          sums, inherited pensions and fluctuating investment returns would
+          be treated.
+        </p>
+
+        <h3>Protect the floor from inflation</h3>
+        <p>
+          A transparent mechanism would be needed to review and uprate the
+          £18,000 figure as prices and living costs change.
+        </p>
+
+        <h3>Provide reliable administration and appeals</h3>
+        <p>
+          Decisions must be clear, data must be accurate, and people must
+          have accessible correction, appeal and hardship routes when an
+          assessment is wrong.
+        </p>
+      </section>
+
+      <section class="questions">
+        <h2>Questions for scrutiny</h2>
+
+        <ol>
+          <li>
+            Should the £18,000 floor apply individually, or should household
+            and couple income affect entitlement?
+          </li>
+
+          <li>
+            Which forms of pension, investment, drawdown and lump-sum income
+            should be included in the assessment?
+          </li>
+
+          <li>
+            Would a pound-for-pound reduction in state support discourage
+            saving, and would a gentler taper be fairer?
+          </li>
+
+          <li>
+            How should the £18,000 floor be uprated if the triple lock is
+            replaced?
+          </li>
+
+          <li>
+            What protections should apply to existing pensioners and people
+            approaching retirement?
+          </li>
+
+          <li>
+            How should periods spent caring, disabled, unemployed or outside
+            compulsory workplace saving affect entitlement?
+          </li>
+
+          <li>
+            Should housing, disability-related or care costs affect the
+            minimum income calculation?
+          </li>
+
+          <li>
+            How should the proposal interact with tax, Pension Credit and
+            other means-tested support?
+          </li>
+
+          <li>
+            What would the transition cost, and when could increased
+            workplace saving begin to reduce state expenditure?
+          </li>
+        </ol>
+      </section>
+
+      <section class="commitment">
+        <h2>The proposed direction</h2>
+        <p>
+          Build private pensions through work. Guarantee a minimum income
+          floor in retirement.
+        </p>
+      </section>
+
+      <section class="cta">
+        <h2>Read. Question. Challenge. Improve.</h2>
+
+        <p>
+          Manifesto 1.1 is an evolving citizen-led project. Evidence,
+          criticism and alternative proposals are invited.
+        </p>
+
+        <a class="button" href="transparency.html">
+          Contribute to public scrutiny
+        </a>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p><strong>MANIFESTO 1.1</strong> · A New Settlement for Britain</p>
+    <p>Day 30 of 40 · Proposal 29</p>
+  </footer>
+</body>
+</html>
