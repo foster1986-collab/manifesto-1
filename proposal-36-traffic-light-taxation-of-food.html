@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Traffic-Light Taxation of Food | Manifesto 1.1</title>
+
+  <meta
+    name="description"
+    content="Proposal 36 would establish a mandatory Green, Amber and Red nutritional classification for qualifying food products sold in the United Kingdom."
+  >
+
+  <link
+    rel="canonical"
+    href="https://manifesto1.co.uk/proposals/traffic-light-taxation-of-food"
+  >
+
+  <style>
+    :root {
+      --navy: #071b38;
+      --navy-light: #10294d;
+      --cream: #f6f3ed;
+      --white: #ffffff;
+      --gold: #e2b35b;
+      --red: #d72e35;
+      --green: #24935c;
+      --amber: #d99b22;
+      --muted: #5d6878;
+      --border: #d8d5ce;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: #111b2b;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 22px 20px;
+      border-bottom: 4px solid var(--red);
+    }
+
+    .header-inner {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .back-link {
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link:hover,
+    .back-link:focus {
+      text-decoration: underline;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 40px auto 70px;
+    }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: clamp(28px, 6vw, 58px);
+      border-radius: 18px;
+      border-top: 6px solid var(--red);
+      box-shadow: 0 16px 38px rgba(7, 27, 56, 0.16);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.15;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.15rem, 7vw, 4.6rem);
+      text-transform: uppercase;
+    }
+
+    .strapline {
+      margin: 22px 0 0;
+      color: var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1rem, 3vw, 1.3rem);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      margin-top: 28px;
+      font-size: 1.18rem;
+      color: #e5e9ef;
+    }
+
+    section {
+      margin-top: 32px;
+      padding: clamp(24px, 5vw, 42px);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      color: var(--navy);
+      font-size: clamp(1.55rem, 4vw, 2.25rem);
+    }
+
+    h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .principle {
+      margin-top: 28px;
+      padding: 24px;
+      background: var(--navy);
+      color: var(--white);
+      border-left: 7px solid var(--gold);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .card {
+      padding: 22px;
+      background: #f7f8fa;
+      border-left: 5px solid var(--gold);
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .traffic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .traffic-card {
+      padding: 24px;
+      color: var(--white);
+      border-radius: 12px;
+    }
+
+    .traffic-card h3 {
+      color: inherit;
+      font-size: 1.45rem;
+      text-transform: uppercase;
+    }
+
+    .green {
+      background: var(--green);
+    }
+
+    .amber {
+      background: var(--amber);
+      color: #151515;
+    }
+
+    .red {
+      background: var(--red);
+    }
+
+    .scrutiny {
+      background: #fff8e8;
+      border-color: #efd18c;
+    }
+
+    .questions {
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    .questions li {
+      margin-bottom: 14px;
+      padding-left: 5px;
+    }
+
+    .source-note {
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .cta {
+      text-align: center;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .cta h2 {
+      color: var(--white);
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 14px 24px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 28px 20px;
+      background: var(--navy);
+      color: #d9dee7;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .grid,
+      .traffic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        width: min(100% - 24px, 920px);
+        margin-top: 20px;
+      }
+
+      section,
+      .hero {
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <p class="brand">MANIFESTO 1.1</p>
+      <a class="back-link" href="index.html">← Return to the policy index</a>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="hero">
+        <p class="eyebrow">Day 37 · Proposal 36 · Part XXII · Policy 40</p>
+
+        <h1>Traffic-Light Taxation of Food</h1>
+
+        <p class="strapline">
+          Clear information. Consistent standards. A healthier food market.
+        </p>
+
+        <p class="intro">
+          Proposal 36 would establish a mandatory national Green, Amber and Red
+          nutritional classification for qualifying food products sold in the
+          United Kingdom.
+        </p>
+      </div>
+
+      <section>
+        <h2>The core idea</h2>
+
+        <p>
+          Manifesto 1.1 proposes a mandatory national traffic-light framework
+          for qualifying food products sold in the United Kingdom. Each product
+          would receive a standardised Green, Amber or Red nutritional
+          classification so consumers can understand its relative nutritional
+          quality quickly and consistently.
+        </p>
+
+        <p>
+          The framework would provide the common classification needed for
+          later proposals on unhealthy-food taxation, healthy-food subsidies
+          and manufacturer reformulation.
+        </p>
+
+        <p>
+          This proposal does not invent the thresholds, tax rates or qualifying
+          scope that the source leaves undefined. These details must be properly
+          developed, evidenced and scrutinised before implementation.
+        </p>
+
+        <div class="principle">
+          Make nutritional quality clear before changing prices or taxation.
+        </div>
+      </section>
+
+      <section>
+        <h2>What the classification would consider</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Sugar and salt</h3>
+            <p>
+              Measure key nutrients associated with diet-related harm using
+              published, evidence-based thresholds.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Saturated and trans fats</h3>
+            <p>
+              Reflect both fat quantity and type, including stronger treatment
+              where the health risks are greater.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Overall composition</h3>
+            <p>
+              Assess the whole product rather than relying on one positive or
+              negative nutrient in isolation.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Degree of processing</h3>
+            <p>
+              Include processing where evidence shows that it materially
+              affects nutritional quality or health.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Fibre and protein</h3>
+            <p>
+              Recognise beneficial nutritional characteristics without allowing
+              them to disguise excessive harms.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Other relevant factors</h3>
+            <p>
+              Permit transparent updates as evidence, products and
+              public-health understanding develop.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>A simple public signal</h2>
+
+        <p>
+          The public-facing system should be easy to recognise, while the
+          technical method beneath it must be independently governed,
+          evidence-led and open to challenge.
+        </p>
+
+        <div class="traffic-grid">
+          <div class="traffic-card green">
+            <h3>Green</h3>
+            <p>
+              Products meeting the strongest defined nutritional criteria.
+              Green would indicate relatively healthier nutritional quality
+              within the national framework.
+            </p>
+          </div>
+
+          <div class="traffic-card amber">
+            <h3>Amber</h3>
+            <p>
+              Products between the Green and Red thresholds. Amber would
+              communicate moderation and allow proportionate policy treatment.
+            </p>
+          </div>
+
+          <div class="traffic-card red">
+            <h3>Red</h3>
+            <p>
+              Products meeting defined high-risk nutritional criteria. Red
+              would indicate the strongest concern, not a ban on purchase.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Rules the framework would need</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Qualifying scope</h3>
+            <p>
+              Define which packaged, prepared, imported, hospitality and
+              specialist products must be classified.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Nutritional thresholds</h3>
+            <p>
+              Publish the evidence, calculations, category adjustments and
+              treatment of serving size.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Classification authority</h3>
+            <p>
+              Give a competent independent body responsibility for standards,
+              decisions and updates.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Transparency</h3>
+            <p>
+              Make classifications, methods, evidence, conflicts and changes
+              publicly accessible.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Appeals and corrections</h3>
+            <p>
+              Allow errors and disputed classifications to be reviewed without
+              weakening enforcement.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Consistent display</h3>
+            <p>
+              Use clear placement, size, wording and accessibility rules across
+              physical stores and online sales.
+            </p>
+          </div>
+        </div>
+
+        <div class="principle">
+          Scope, thresholds, exemptions and governance must be specified before
+          implementation.
+        </div>
+      </section>
+
+      <section>
+        <h2>Consumer understanding and industry incentives</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Quick comparison</h3>
+            <p>
+              Let shoppers compare products consistently without requiring
+              specialist nutritional knowledge.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Accessible design</h3>
+            <p>
+              Use legible labels, plain language and formats suitable for
+              colour-vision deficiency and digital shopping.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Reformulation</h3>
+            <p>
+              Give manufacturers a clear incentive to reduce harmful
+              ingredients and improve overall nutritional quality.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Reclassification</h3>
+            <p>
+              Allow genuinely improved products to move category once they meet
+              the published criteria.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Public education</h3>
+            <p>
+              Explain what each colour means, what it does not mean and how it
+              fits within an overall diet.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Ongoing evaluation</h3>
+            <p>
+              Track understanding, purchasing, reformulation, health effects,
+              avoidance and unintended consequences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Safeguards against distortion</h2>
+
+        <ul>
+          <li>
+            Prevent a single added nutrient from masking excessive sugar, salt
+            or harmful fats.
+          </li>
+          <li>
+            Use appropriate product categories where direct comparison would
+            otherwise mislead consumers.
+          </li>
+          <li>
+            Review the treatment of portion sizes, concentrates and products
+            marketed as multiple servings.
+          </li>
+          <li>
+            Protect small producers from unnecessary complexity without
+            creating loopholes in consumer protection.
+          </li>
+          <li>
+            Coordinate with existing UK nutrition labelling and avoid
+            contradictory signals on the same product.
+          </li>
+        </ul>
+
+        <div class="principle">
+          Clear choices for consumers. Better incentives for the food industry.
+        </div>
+      </section>
+
+      <section class="scrutiny">
+        <h2>Questions for scrutiny</h2>
+
+        <p>
+          This proposal should be tested with nutrition scientists,
+          public-health specialists, consumer groups, people affected by
+          diet-related ill health, food manufacturers, farmers, retailers,
+          hospitality businesses, schools, local authorities, trading
+          standards, economists and the devolved administrations.
+        </p>
+
+        <ol class="questions">
+          <li>
+            Which food products should qualify, and which exemptions - if any -
+            are justified?
+          </li>
+          <li>
+            Which body should set, apply and periodically revise the
+            classification rules?
+          </li>
+          <li>
+            How should sugar, salt, saturated fat, trans fats, fibre, protein
+            and processing be weighted?
+          </li>
+          <li>
+            Should thresholds vary by food category, portion size or intended
+            use, and how can complexity be controlled?
+          </li>
+          <li>
+            How should fresh, unpackaged, restaurant, takeaway and imported
+            foods be treated?
+          </li>
+          <li>
+            How can labels remain accessible to people with colour-vision
+            deficiency, limited literacy or visual impairment?
+          </li>
+          <li>
+            What evidence and consumer testing should be required before the
+            categories become mandatory?
+          </li>
+          <li>
+            How should manufacturers challenge errors while preventing delay
+            or tactical appeals?
+          </li>
+          <li>
+            How should reclassification work when a product is reformulated or
+            new evidence emerges?
+          </li>
+          <li>
+            What enforcement, inspection and penalties should apply to
+            missing, misleading or false classifications?
+          </li>
+          <li>
+            How should the UK framework interact with existing front-of-pack
+            labels and devolved responsibilities?
+          </li>
+          <li>
+            Which outcomes should trigger revision: understanding, purchasing,
+            reformulation, health or market effects?
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>The proposed direction</h2>
+
+        <p>
+          Proposal 36 would establish a mandatory national Green, Amber and Red
+          system for qualifying food products.
+        </p>
+
+        <p>
+          Classification would reflect sugar, salt, saturated and trans fats,
+          overall composition, processing, fibre, protein and other relevant
+          nutritional characteristics.
+        </p>
+
+        <p>
+          The system would help consumers compare products and create a
+          transparent foundation for later food-tax, subsidy and reformulation
+          policies.
+        </p>
+
+        <p>
+          Before implementation, government must specify the qualifying scope,
+          nutritional thresholds, authority, exemptions, display rules,
+          appeals, enforcement and evaluation plan.
+        </p>
+
+        <div class="principle">
+          Give every qualifying food product one clear, consistent nutritional
+          signal.
+        </div>
+      </section>
+
+      <section>
+        <h2>Source note</h2>
+
+        <p class="source-note">
+          Source basis: Manifesto 1.1, Part XXII, Policy 40,
+          “Traffic-Light Taxation of Food”, Major Promise 36 - A National Food
+          Traffic-Light System. The source restores the mandatory
+          Green/Amber/Red framework and nutritional factors. Qualifying scope,
+          thresholds, authority and exemptions are not specified and remain
+          open for scrutiny.
+        </p>
+      </section>
+
+      <section class="cta">
+        <h2>Read. Question. Challenge. Improve.</h2>
+
+        <p>
+          Manifesto 1.1 is a citizen-led project. This proposal is presented
+          for public scrutiny, not as a finished or unquestionable policy.
+        </p>
+
+        <a href="https://manifesto1.co.uk">
+          Visit the main Manifesto 1.1 site
+        </a>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    Manifesto 1.1 — A New Settlement for Britain
+  </footer>
+</body>
+</html>
